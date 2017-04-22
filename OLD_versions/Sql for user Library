@@ -1,0 +1,11 @@
+ 
+create table users_library (
+  id              INTEGER PRIMARY KEY,
+  user_email      VARCHAR2(255),
+  user_product_id INTEGER,
+  date_transaction  DATE NOT NULL ,
+  expiring_date     DATE,
+  FOREIGN KEY (email) REFERENCES users (user_email),
+  FOREIGN KEY (id) REFERENCES product (id)
+
+);
